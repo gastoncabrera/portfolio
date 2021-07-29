@@ -1,0 +1,80 @@
+.hero {
+  background-color: $color-primary;
+  height: calc(100vh - 57px);
+}
+.hero__descriptionContainer {
+  width: 250px;
+  max-height: 74px;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  filter: drop-shadow(0 4px 4px 0);
+  background-color: rgba($color: $color-quarter, $alpha: 0.3);
+  margin: 0 auto;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+.hero__greeting,
+.hero__name,
+.hero__workPosition {
+  margin: 0;
+  padding: 0;
+}
+.hero__greeting {
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-quarter;
+  line-height: 25px;
+}
+.hero__name {
+  font-size: 28px;
+  font-weight: bold;
+  color: $color-secondary;
+}
+.hero__workPosition {
+  font-size: 12px;
+  font-weight: 300;
+  color: $color-quarter;
+  padding-top: 5px;
+}
+.hero__imageContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.hero__image {
+  width: 180px;
+  filter: brightness(0.9);
+}
+.hero__skill {
+  width: 40px;
+  position: absolute;
+}
+.GIT {
+  width: 30px;
+  top: 50%;
+  right: 10%;
+}
+.Sass {
+  top: 50%;
+  left: 10%;
+}
+.React {
+  top: 20%;
+  right: 10%;
+}
+.Javascript {
+  width: 25px;
+  top: 20%;
+  left: 20%;
+}
+.hero__contactList {
+  padding: 16px 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.hero__contactItem {
+  margin: 0 16px;
+}

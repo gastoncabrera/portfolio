@@ -1,0 +1,15 @@
+@mixin breakpoint($size) {
+  @if $size== "" {
+    @content;
+  } @else {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin title {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}

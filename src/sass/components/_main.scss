@@ -1,0 +1,21 @@
+.main {
+  background-color: $color-tertiary;
+  padding: 20px 0;
+}
+.main__skills {
+  height: 30px;
+  cursor: pointer;
+}
+.main__title {
+  @include title;
+}
+.main__containerSkills {
+  display: flex;
+  justify-content: space-around;
+}
+.main__proyects {
+  padding: 20px 0;
+}
+.main__titleProyects {
+  @include title;
+}

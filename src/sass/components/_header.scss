@@ -1,0 +1,29 @@
+.header {
+  background-color: $color-primary;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: $color-secondary;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__center {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+.navbar {
+  display: none;
+}
+.list__container {
+  display: flex;
+  align-items: center;
+}
