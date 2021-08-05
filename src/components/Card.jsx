@@ -20,10 +20,13 @@ export default function Card({ proyects }) {
           </div>
           <p className="card__description">{proyects.description}</p>
           <div className="card__linksContainer">
-            <a href="/" className="card__link demo">
+            <a href={proyects.demoLink} className="card__link demo">
               Demo
             </a>
-            <a href="/" className="card__link code">
+            <a
+              href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
+              className="card__link code"
+            >
               Code
             </a>
           </div>

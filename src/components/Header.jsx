@@ -1,14 +1,21 @@
+import { useState } from "react";
+import DropdownMenu from "./DropdownMenu";
 export default function Header() {
+  const [menu, setMenu] = useState(false);
+  function MenuBurguer() {
+    setMenu(!menu);
+  }
+
   return (
     <>
-      <header className="header">
+      <header className="header" id="header">
         <div className="header__container">
           <div className="logo">
             <div className="logo__container left">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1rem"
-                height="1rem"
+                width="1.5rem"
+                height="1.5rem"
                 fill="currentColor"
                 className="angleBrackets left"
                 viewBox="0 0 16 16"
@@ -24,8 +31,8 @@ export default function Header() {
               <span className="logo__forwardSlash">/</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1rem"
-                height="1rem"
+                width="1.5rem"
+                height="1.5rem"
                 fill="currentColor"
                 className="angleBrackets right"
                 viewBox="0 0 16 16"
@@ -38,18 +45,26 @@ export default function Header() {
             </div>
           </div>
           <nav className="navbar">
-            <ul>
-              <li>
-                <a href="/">inicio</a>
+            <ul className="navbar__list">
+              <li className="navbar__item">
+                <a href="/" className="navbar__link">
+                  Inicio
+                </a>
               </li>
-              <li>
-                <a href="/">habilidades</a>
+              <li className="navbar__item">
+                <a href="#skills" className="navbar__link">
+                  Habilidades
+                </a>
               </li>
-              <li>
-                <a href="/">proyectos</a>
+              <li className="navbar__item">
+                <a href="#proyects" className="navbar__link">
+                  Proyectos
+                </a>
               </li>
-              <li>
-                <a href="/">contacto</a>
+              <li className="navbar__item">
+                <a href="#contact" className="navbar__link">
+                  Contacto
+                </a>
               </li>
             </ul>
           </nav>
@@ -61,6 +76,7 @@ export default function Header() {
               fill="white"
               className="list"
               viewBox="0 0 16 16"
+              onClick={MenuBurguer}
             >
               <path
                 fill="evenodd"
@@ -68,6 +84,7 @@ export default function Header() {
               />
             </svg>
           </div>
+          <DropdownMenu dropDawn={menu} />
         </div>
       </header>
     </>

@@ -44,8 +44,8 @@ const proyects = [
     description:
       "Es una pagina el la cual esta toda la informacion de los personajes de rick and morty, obtenidas de una API.",
     skills: [1, 2],
-    demoLink: "",
-    repoLikn: "",
+    repoLikn: "rickandmorty",
+    demoLink: "https://gastoncabrera.github.io/rickandmorty/",
   },
   {
     id: 2,
@@ -54,8 +54,8 @@ const proyects = [
     description:
       "Es una pagina en la cual puedes conocer los precios de las distintas criptomonedas.",
     skills: [2, 3, 4],
-    demoLink: "",
-    repoLikn: "",
+    demoLink: "https://gastoncabrera.github.io/batatabit/",
+    repoLikn: "batatabit",
   },
   {
     id: 3,
@@ -64,8 +64,8 @@ const proyects = [
     description:
       "Es un clone del buscador mas usado del mundo, una copia de su diseño original.",
     skills: [2, 3, 4],
-    demoLink: "",
-    repoLikn: "",
+    demoLink: "https://gastoncabrera.github.io/google-clone/",
+    repoLikn: "googleclone",
   },
   {
     id: 4,
@@ -74,8 +74,8 @@ const proyects = [
     description:
       "Es una aplicacion de gastos la cual toda la informacion se sube en el local Storage.",
     skills: [2, 3, 4, 6],
-    demoLink: "",
-    repoLikn: "",
+    demoLink: "https://gastoncabrera.github.io/aplicaciondegastos/",
+    repoLikn: "aplicaciondegastos",
   },
   {
     id: 5,

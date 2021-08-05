@@ -1,4 +1,5 @@
 .card {
+  max-width: 920px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -62,4 +63,10 @@
   color: $color-tertiary;
   border-radius: 10px;
   padding: 5px 40px;
+}
+@include breakpoint(lg) {
+  .card {
+    justify-content: space-around;
+    gap: 60px;
+  }
 }

@@ -2,6 +2,12 @@
   background-color: $color-primary;
   height: calc(100vh - 57px);
 }
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .hero__descriptionContainer {
   width: 250px;
   max-height: 74px;
@@ -9,7 +15,6 @@
   backdrop-filter: blur(15px);
   filter: drop-shadow(0 4px 4px 0);
   background-color: rgba($color: $color-quarter, $alpha: 0.3);
-  margin: 0 auto;
   padding: 10px 10px;
   border-radius: 20px;
 }
@@ -37,6 +42,7 @@
   padding-top: 5px;
 }
 .hero__imageContainer {
+  width: 320px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -50,26 +56,26 @@
   width: 40px;
   position: absolute;
 }
-.GIT {
+.HTML {
   width: 30px;
   top: 50%;
   right: 10%;
 }
-.Sass {
+.CSS {
   top: 50%;
   left: 10%;
 }
-.React {
+.REACT {
   top: 20%;
   right: 10%;
 }
-.Javascript {
+.JAVASCRIPT {
   width: 25px;
   top: 20%;
   left: 20%;
 }
 .hero__contactList {
-  padding: 16px 0;
+  padding: 32px 0;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -77,4 +83,104 @@
 }
 .hero__contactItem {
   margin: 0 16px;
+}
+.hero__skillAndProyects {
+  display: none;
+}
+.curriculum {
+  width: 30px;
+  height: 30px;
+  background-color: $color-fifth;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@include breakpoint(sm) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .hero__containerLeft {
+    order: 1;
+  }
+  .hero__containerRight {
+    order: 2;
+  }
+  .hero__skillAndProyects {
+    display: block;
+  }
+  .hero__containerSkill {
+    display: none;
+  }
+  .hero__skillRight {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 10px;
+  }
+  .skill__container {
+    display: flex;
+  }
+  .hero__proyect {
+    width: 100px;
+    height: 70px;
+    background-color: #24282f;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgba(black, 0.2);
+  }
+  .hero__proyectsContainer {
+    display: flex;
+  }
+  .hero__proyectImage {
+    width: 80px;
+    object-fit: cover;
+  }
+  .skill__title,
+  .hero__proyectsTitle {
+    color: rgba($color-tertiary, 0.5);
+    text-shadow: 2px 2px black;
+    // color: black;
+  }
+}
+@include breakpoint(md) {
+  .hero__proyect {
+    width: 200px;
+    height: 120px;
+  }
+  .hero__proyectImage {
+    width: 160px;
+  }
+}
+@include breakpoint(xl) {
+  .hero__container {
+    min-width: 1100px;
+    justify-content: space-around;
+  }
+  .hero__image {
+    width: 200px;
+  }
+  .hero__descriptionContainer {
+    width: 300px;
+  }
+  .hero__containerRight {
+    min-width: 400px;
+  }
+  .curriculum {
+    left: 150px;
+    cursor: pointer;
+  }
 }

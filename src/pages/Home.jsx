@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 import "../sass/pages/home.scss";
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
       <Header />
       <Hero />
       <Main />
-      <footer>footer</footer>
+      <Footer />
     </>
   );
 }
