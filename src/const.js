@@ -83,8 +83,8 @@ const proyects = [
     img: "https://i.ibb.co/xJQc7X5/Copia-Enjin.png",
     description: "Es una copia de la pagina para crear tus NFT.",
     skills: [1, 5],
-    demoLink: "",
-    repoLikn: "",
+    demoLink: "https://gastoncabrera.github.io/enjinClone/",
+    repoLikn: "enjinClone",
   },
 ];
 const allProyects = proyects.map((proyectItem) => {

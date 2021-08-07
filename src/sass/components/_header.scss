@@ -36,23 +36,23 @@
 @include breakpoint(sm) {
   .navbar {
     display: flex;
+    &__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    &__item {
+      margin: 0 10px;
+    }
+    &__link {
+      text-decoration: none;
+      color: $color-tertiary;
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
   .list__container {
     display: none;
-  }
-  .navbar__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .navbar__item {
-    margin: 0 10px;
-  }
-  .navbar__link {
-    text-decoration: none;
-    color: $color-tertiary;
-    font-weight: 300;
-    font-size: 16px;
   }
 }

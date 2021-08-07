@@ -1,31 +1,32 @@
 .main {
   background-color: $color-tertiary;
   padding: 20px 0;
-}
-.main__skills {
-  height: 30px;
-  cursor: pointer;
-}
-.main__title {
-  @include title;
-}
-.main__containerSkills {
-  max-width: 920px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-.main__proyects {
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main__titleProyects {
-  @include title;
-}
-.main__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &__skills {
+    height: 30px;
+    cursor: pointer;
+  }
+  &__title {
+    @include title;
+  }
+  &__containerSkills {
+    max-width: 920px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__proyects {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__titleProyects {
+    @include title;
+  }
+  &__container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

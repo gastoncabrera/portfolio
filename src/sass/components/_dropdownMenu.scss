@@ -7,28 +7,25 @@
   display: flex;
   background-color: $color-primary;
   transition: 0.5s all;
-}
-.menuDropDawn__disabled {
-  top: 100%;
-  left: -100%;
-  height: 150vw;
-  position: absolute;
-  display: flex;
-  width: 100%;
-  transition: 0.5s all;
-}
-.Close {
-  left: -100%;
-}
-.menuDropDawn__list {
-  list-style: none;
-}
-.menuDropDawn__item {
-  margin: 20px 0;
-}
-.menuDropDawn__link {
-  color: $color-quarter;
-  font-size: 20px;
-  font-weight: 300;
-  text-decoration: none;
+  &__disabled {
+    top: 100%;
+    left: -100%;
+    height: 150vw;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    transition: 0.5s all;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    margin: 20px 0;
+  }
+  &__link {
+    color: $color-quarter;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+  }
 }

@@ -1,22 +1,67 @@
 .hero {
   background-color: $color-primary;
   height: calc(100vh - 57px);
-}
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hero__descriptionContainer {
-  width: 250px;
-  max-height: 74px;
-  height: 100%;
-  backdrop-filter: blur(15px);
-  filter: drop-shadow(0 4px 4px 0);
-  background-color: rgba($color: $color-quarter, $alpha: 0.3);
-  padding: 10px 10px;
-  border-radius: 20px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__descriptionContainer {
+    width: 250px;
+    max-height: 74px;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    filter: drop-shadow(0 4px 4px 0);
+    background-color: rgba($color: $color-quarter, $alpha: 0.3);
+    padding: 10px 10px;
+    border-radius: 20px;
+  }
+  &__greeting {
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-quarter;
+    line-height: 25px;
+  }
+  &__name {
+    font-size: 28px;
+    font-weight: bold;
+    color: $color-secondary;
+  }
+  &__workPosition {
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-quarter;
+    padding-top: 5px;
+  }
+  &__imageContainer {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  &__image {
+    width: 180px;
+    filter: brightness(0.9);
+  }
+  &__skill {
+    width: 40px;
+    position: absolute;
+  }
+  &__contactList {
+    padding: 32px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  &__contactItem {
+    margin: 0 16px;
+  }
+  &__skillAndProyects {
+    display: none;
+  }
 }
 .hero__greeting,
 .hero__name,
@@ -24,40 +69,7 @@
   margin: 0;
   padding: 0;
 }
-.hero__greeting {
-  font-size: 18px;
-  font-weight: bold;
-  color: $color-quarter;
-  line-height: 25px;
-}
-.hero__name {
-  font-size: 28px;
-  font-weight: bold;
-  color: $color-secondary;
-}
-.hero__workPosition {
-  font-size: 12px;
-  font-weight: 300;
-  color: $color-quarter;
-  padding-top: 5px;
-}
-.hero__imageContainer {
-  width: 320px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-.hero__image {
-  width: 180px;
-  filter: brightness(0.9);
-}
-.hero__skill {
-  width: 40px;
-  position: absolute;
-}
 .HTML {
-  width: 30px;
   top: 50%;
   right: 10%;
 }
@@ -70,22 +82,8 @@
   right: 10%;
 }
 .JAVASCRIPT {
-  width: 25px;
   top: 20%;
   left: 20%;
-}
-.hero__contactList {
-  padding: 32px 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-.hero__contactItem {
-  margin: 0 16px;
-}
-.hero__skillAndProyects {
-  display: none;
 }
 .curriculum {
   width: 30px;
@@ -104,50 +102,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .hero__container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .hero__containerLeft {
-    order: 1;
-  }
-  .hero__containerRight {
-    order: 2;
-  }
-  .hero__skillAndProyects {
-    display: block;
-  }
-  .hero__containerSkill {
-    display: none;
-  }
-  .hero__skillRight {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    margin: 0 10px;
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    &__containerLeft {
+      order: 1;
+    }
+    &__containerRight {
+      order: 2;
+    }
+    &__skillAndProyects {
+      display: block;
+    }
+    &__containerSkill {
+      display: none;
+    }
+    &__skillRight {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin: 0 10px;
+    }
+    &__proyect {
+      width: 100px;
+      height: 70px;
+      background-color: #24282f;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: 2px 2px rgba(black, 0.2);
+    }
+    &__proyectsContainer {
+      display: flex;
+    }
+    &__proyectImage {
+      width: 80px;
+      object-fit: cover;
+    }
   }
   .skill__container {
     display: flex;
-  }
-  .hero__proyect {
-    width: 100px;
-    height: 70px;
-    background-color: #24282f;
-    margin: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: 2px 2px rgba(black, 0.2);
-  }
-  .hero__proyectsContainer {
-    display: flex;
-  }
-  .hero__proyectImage {
-    width: 80px;
-    object-fit: cover;
   }
   .skill__title,
   .hero__proyectsTitle {
@@ -157,27 +155,31 @@
   }
 }
 @include breakpoint(md) {
-  .hero__proyect {
-    width: 200px;
-    height: 120px;
-  }
-  .hero__proyectImage {
-    width: 160px;
+  .hero {
+    &__proyect {
+      width: 200px;
+      height: 120px;
+    }
+    &__proyectImage {
+      width: 160px;
+    }
   }
 }
 @include breakpoint(xl) {
-  .hero__container {
-    min-width: 1100px;
-    justify-content: space-around;
-  }
-  .hero__image {
-    width: 200px;
-  }
-  .hero__descriptionContainer {
-    width: 300px;
-  }
-  .hero__containerRight {
-    min-width: 400px;
+  .hero {
+    &__container {
+      min-width: 1100px;
+      justify-content: space-around;
+    }
+    &__image {
+      width: 200px;
+    }
+    &__descriptionContainer {
+      width: 300px;
+    }
+    &__containerRight {
+      min-width: 400px;
+    }
   }
   .curriculum {
     left: 150px;

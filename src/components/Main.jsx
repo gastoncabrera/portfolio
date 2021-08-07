@@ -4,10 +4,8 @@ export default function Main() {
   return (
     <>
       <div className="main">
-        <div className="main__container">
-          <h1 className="main__title" id="skills">
-            Habilidades
-          </h1>
+        <div className="main__container" id="skill">
+          <h1 className="main__title">Habilidades</h1>
           <div className="main__containerSkills">
             {skills.map((item) => (
               <img
@@ -20,10 +18,8 @@ export default function Main() {
             ))}
           </div>
         </div>
-        <div className="main__proyects">
-          <h1 className="main__titleProyects" id="proyects">
-            Proyectos
-          </h1>
+        <div className="main__proyects" id="proyect">
+          <h1 className="main__titleProyects">Proyectos</h1>
           <div className="card">
             {allProyects.map((proyect) => (
               <Card proyects={proyect} key={proyect.id} />

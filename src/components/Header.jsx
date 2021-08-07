@@ -84,7 +84,7 @@ export default function Header() {
               />
             </svg>
           </div>
-          <DropdownMenu dropDawn={menu} />
+          <DropdownMenu dropDawn={menu} menuDropDawn={() => setMenu(!menu)} />
         </div>
       </header>
     </>
