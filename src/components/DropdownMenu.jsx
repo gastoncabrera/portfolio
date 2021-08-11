@@ -15,7 +15,7 @@ export default function DropdownMenu({ dropDawn, menuDropDawn }) {
           <ul className="menuDropDawn__list">
             <li className="menuDropDawn__item">
               <a
-                href="/"
+                href="#"
                 className="menuDropDawn__link"
                 onClick={childrenModifyMenu}
               >
