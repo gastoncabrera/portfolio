@@ -1,16 +1,11 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 export default function DropdownMenu({ dropDawn, menuDropDawn }) {
   const active = dropDawn;
   const childrenModifyMenu = menuDropDawn;
 
-  const menu = useRef();
-
   return (
     <>
-      <div
-        ref={menu}
-        className={active ? "menuDropDawn" : "menuDropDawn__disabled"}
-      >
+      <div className={active ? "menuDropDawn" : "menuDropDawn__disabled"}>
         <nav className="menuDropDawn__container">
           <ul className="menuDropDawn__list">
             <li className="menuDropDawn__item">

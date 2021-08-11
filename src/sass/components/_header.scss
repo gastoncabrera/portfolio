@@ -55,4 +55,9 @@
   .list__container {
     display: none;
   }
+  .active {
+    padding: 2px 5px;
+    border-radius: 20px;
+    background-color: $color-secondary;
+  }
 }

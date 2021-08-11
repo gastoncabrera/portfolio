@@ -68,6 +68,9 @@
     transform: scale(0.9);
   }
 }
+.prueba {
+  opacity: 0;
+}
 @include breakpoint(lg) {
   .card {
     justify-content: space-around;

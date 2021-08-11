@@ -1,7 +1,9 @@
 export default function Card({ proyects }) {
+  let algo = { proyects };
+  console.log(algo);
   return (
     <>
-      <div className="card__container">
+      <div className={algo.id === 1 ? " prueba" : "card__container"}>
         <div className="card__containerImage">
           <img
             src={proyects.img}

@@ -19,7 +19,9 @@ export default function Main() {
           </div>
         </div>
         <div className="main__proyects" id="proyect">
-          <h1 className="main__titleProyects">Proyectos</h1>
+          <h1 className="main__titleProyects" id="image">
+            Proyectos
+          </h1>
           <div className="card">
             {allProyects.map((proyect) => (
               <Card proyects={proyect} key={proyect.id} />

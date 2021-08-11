@@ -1,11 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DropdownMenu from "./DropdownMenu";
 export default function Header() {
   const [menu, setMenu] = useState(false);
   function MenuBurguer() {
     setMenu(!menu);
   }
-
+  const [positionproyect, setPositionproyect] = useState(false);
+  const [positioncontact, setPositioncontact] = useState(false);
+  const [positionskill, setPositionskill] = useState(false);
+  const [positionInit, setPositionInit] = useState(true);
+  useEffect(() => {
+    const showPositionInit = () => {
+      if (window.scrollY < 250) {
+        setPositionInit(true);
+        setPositionskill(false);
+        setPositionproyect(false);
+        setPositioncontact(false);
+      }
+      if (window.scrollY >= 250 && window.scrollY < 270) {
+        setPositionInit(false);
+        setPositionskill(true);
+        setPositionproyect(false);
+        setPositioncontact(false);
+      }
+      if (window.scrollY >= 270 && window.scrollY < 1600) {
+        setPositionInit(false);
+        setPositionskill(false);
+        setPositionproyect(true);
+        setPositioncontact(false);
+      }
+      if (window.scrollY >= 1600) {
+        setPositionInit(false);
+        setPositionskill(false);
+        setPositionproyect(false);
+        setPositioncontact(true);
+      }
+    };
+    window.addEventListener("scroll", showPositionInit);
+  }, []);
   return (
     <>
       <header className="header" id="header">
@@ -47,22 +79,42 @@ export default function Header() {
           <nav className="navbar">
             <ul className="navbar__list">
               <li className="navbar__item">
-                <a href="/" className="navbar__link">
+                <a
+                  href="#"
+                  className={
+                    positionInit ? "navbar__link active" : "navbar__link"
+                  }
+                >
                   Inicio
                 </a>
               </li>
-              <li className="navbar__item">
-                <a href="#skills" className="navbar__link">
+              <li className="navbar__item habilidades">
+                <a
+                  href="#skills"
+                  className={
+                    positionskill ? "navbar__link active" : "navbar__link"
+                  }
+                >
                   Habilidades
                 </a>
               </li>
-              <li className="navbar__item">
-                <a href="#proyects" className="navbar__link">
+              <li className="navbar__item proyecto">
+                <a
+                  href="#proyects"
+                  className={
+                    positionproyect ? "navbar__link active" : "navbar__link"
+                  }
+                >
                   Proyectos
                 </a>
               </li>
               <li className="navbar__item">
-                <a href="#contact" className="navbar__link">
+                <a
+                  href="#contact"
+                  className={
+                    positioncontact ? "navbar__link active" : "navbar__link"
+                  }
+                >
                   Contacto
                 </a>
               </li>
