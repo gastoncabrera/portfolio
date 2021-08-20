@@ -1,7 +1,7 @@
 export default function Card({ proyects }) {
   return (
     <>
-      <div className={algo.id === 1 ? " prueba" : "card__container"}>
+      <div className="card__container">
         <div className="card__containerImage">
           <img
             src={proyects.img}
@@ -20,11 +20,16 @@ export default function Card({ proyects }) {
           </div>
           <p className="card__description">{proyects.description}</p>
           <div className="card__linksContainer">
-            <a href={proyects.demoLink} className="card__link demo">
+            <a
+              href={proyects.demoLink}
+              target="_blank"
+              className="card__link demo"
+            >
               Demo
             </a>
             <a
               href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
+              target="_blank"
               className="card__link code"
             >
               Code

@@ -86,6 +86,16 @@ const proyects = [
     demoLink: "https://gastoncabrera.github.io/aplicaciondegastos/",
     repoLikn: "aplicaciondegastos",
   },
+  {
+    id: 6,
+    title: "Lista de contactos",
+    img: "https://i.ibb.co/Q8Cntks/listadecontatos.png",
+    description:
+      "Es una pagina la cual podes guardar tu lista de contactos,la informacion se sube en el local Storage.",
+    skills: [1, 2],
+    demoLink: "https://gastoncabrera.github.io/listadecontactos/",
+    repoLikn: "listadecontactos",
+  },
 ];
 const allProyects = proyects.map((proyectItem) => {
   const _skills = skills.filter((skillItem) =>
