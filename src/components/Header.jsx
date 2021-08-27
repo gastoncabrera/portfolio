@@ -29,12 +29,12 @@ export default function Header() {
         setPositionproyect(true);
         setPositioncontact(false);
       }
-      if (window.scrollY >= 1600) {
-        setPositionInit(false);
-        setPositionskill(false);
-        setPositionproyect(false);
-        setPositioncontact(true);
-      }
+      // if (window.scrollY >= 1600) {
+      //   setPositionInit(false);
+      //   setPositionskill(false);
+      //   setPositionproyect(false);
+      //   setPositioncontact(true);
+      // }
     };
     window.addEventListener("scroll", showPositionInit);
   }, []);

@@ -37,7 +37,7 @@ export default function Hero() {
               </h1>
               <div className="hero__proyectsContainer">
                 {someProyects.map((proyect) => (
-                  <a href={proyect.demoLink} key={proyect.id}>
+                  <a href={proyect.demoLink} target="_blank" key={proyect.id}>
                     <div className="hero__proyect">
                       <img
                         className="hero__proyectImage"
