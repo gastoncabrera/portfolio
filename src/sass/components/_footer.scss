@@ -38,3 +38,16 @@
   display: flex;
   align-items: center;
 }
+@include breakpoint(md) {
+  .footer__links {
+    height: 50px;
+    width: 50px;
+  }
+  .emailFooter,
+  .linkedinFooter,
+  .instagramFooter,
+  .twitterFooter {
+    height: 25px;
+    width: 25px;
+  }
+}

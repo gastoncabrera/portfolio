@@ -1,8 +1,10 @@
 .header {
   background-color: $color-primary;
-  position: sticky;
+  position: fixed;
   z-index: 3;
   top: 0;
+  height: 100px;
+  width: 100%;
   &__container {
     display: flex;
     align-items: center;
@@ -33,7 +35,7 @@
   display: flex;
   align-items: center;
 }
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .navbar {
     display: flex;
     &__list {
@@ -59,5 +61,18 @@
     padding: 2px 5px;
     border-radius: 20px;
     background-color: $color-secondary;
+  }
+  .angleBrackets {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .logo__center {
+    font-size: 40px;
+  }
+  .logo__forwardSlash {
+    font-size: 40px;
+  }
+  .navbar__link {
+    font-size: 20px;
   }
 }

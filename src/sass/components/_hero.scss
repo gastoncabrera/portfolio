@@ -1,6 +1,7 @@
 .hero {
+  padding-top: 100px;
   background-color: $color-primary;
-  height: calc(100vh - 57px);
+  height: calc(100vh - 100px);
   &__container {
     display: flex;
     flex-direction: column;
@@ -8,13 +9,11 @@
     align-items: center;
   }
   &__descriptionContainer {
-    width: 250px;
-    max-height: 74px;
     height: 100%;
     backdrop-filter: blur(15px);
     filter: drop-shadow(0 4px 4px 0);
     background-color: rgba($color: $color-quarter, $alpha: 0.3);
-    padding: 10px 10px;
+    padding: 15px 25px;
     border-radius: 20px;
   }
   &__greeting {
@@ -22,17 +21,20 @@
     font-weight: bold;
     color: $color-quarter;
     line-height: 25px;
+    margin: 0;
   }
   &__name {
     font-size: 28px;
     font-weight: bold;
     color: $color-secondary;
+    margin: 0;
   }
   &__workPosition {
     font-size: 12px;
     font-weight: 300;
     color: $color-quarter;
     padding-top: 5px;
+    margin: 0;
   }
   &__imageContainer {
     width: 320px;
@@ -62,12 +64,6 @@
   &__skillAndProyects {
     display: none;
   }
-}
-.hero__greeting,
-.hero__name,
-.hero__workPosition {
-  margin: 0;
-  padding: 0;
 }
 .SASS {
   top: 50%;
@@ -151,10 +147,65 @@
   .hero__proyectsTitle {
     color: rgba($color-tertiary, 0.5);
     text-shadow: 2px 2px black;
-    // color: black;
   }
 }
+
 @include breakpoint(md) {
+  .hero__image {
+    width: 270px;
+  }
+  .email,
+  .github,
+  .linkedin {
+    height: 40px;
+    width: 40px;
+  }
+  .hero__greeting {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .hero__name {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .hero__workPosition {
+    font-size: 16px;
+    padding: 0;
+  }
+  .hero__descrtiptionContainer {
+    max-width: 350px;
+    padding: 20px 30px;
+  }
+  .hero__greeting {
+    margin-bottom: 15px;
+    line-height: 30px;
+  }
+  .hero__skillRight {
+    height: 70px;
+    width: 70px;
+  }
+  .hero__proyect {
+    height: 110px;
+    width: 170px;
+  }
+  .hero__proyectImage {
+    width: 140px;
+  }
+  .curriculum {
+    height: 50px;
+    width: 50px;
+  }
+  .cvIcon {
+    height: 20px;
+    width: 20px;
+  }
+  .skill__title,
+  .hero__proyectsTitle {
+    font-size: 30px;
+  }
+}
+
+@include breakpoint(xl) {
   .hero {
     &__proyect {
       width: 200px;
@@ -164,21 +215,10 @@
       width: 160px;
     }
   }
-}
-@include breakpoint(xl) {
   .hero {
     &__container {
       min-width: 1100px;
       justify-content: space-around;
-    }
-    &__image {
-      width: 200px;
-    }
-    &__descriptionContainer {
-      width: 300px;
-    }
-    &__containerRight {
-      min-width: 400px;
     }
   }
   .curriculum {

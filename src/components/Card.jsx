@@ -23,6 +23,7 @@ export default function Card({ proyects }) {
             <a
               href={proyects.demoLink}
               target="_blank"
+              rel="noreferrer"
               className="card__link demo"
             >
               Demo
@@ -30,6 +31,7 @@ export default function Card({ proyects }) {
             <a
               href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
               target="_blank"
+              rel="noreferrer"
               className="card__link code"
             >
               Code
