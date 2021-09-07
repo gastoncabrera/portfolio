@@ -1,43 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
-export default function Header() {
+export default function Header({
+  positionproyect,
+  positioncontact,
+  positionskill,
+  positionInit,
+}) {
   const [menu, setMenu] = useState(false);
   function MenuBurguer() {
     setMenu(!menu);
   }
-  const [positionproyect, setPositionproyect] = useState(false);
-  const [positioncontact, setPositioncontact] = useState(false);
-  const [positionskill, setPositionskill] = useState(false);
-  const [positionInit, setPositionInit] = useState(true);
-  useEffect(() => {
-    const showPositionInit = () => {
-      if (window.scrollY < 350) {
-        setPositionInit(true);
-        setPositionskill(false);
-        setPositionproyect(false);
-        setPositioncontact(false);
-      }
-      if (window.scrollY >= 350 && window.scrollY < 800) {
-        setPositionInit(false);
-        setPositionskill(true);
-        setPositionproyect(false);
-        setPositioncontact(false);
-      }
-      if (window.scrollY >= 800 && window.scrollY < 1650) {
-        setPositionInit(false);
-        setPositionskill(false);
-        setPositionproyect(true);
-        setPositioncontact(false);
-      }
-      if (window.scrollY >= 1650) {
-        setPositionInit(false);
-        setPositionskill(false);
-        setPositionproyect(false);
-        setPositioncontact(true);
-      }
-    };
-    window.addEventListener("scroll", showPositionInit);
-  }, []);
+
   return (
     <header className="header" id="header">
       <div className="header__container">

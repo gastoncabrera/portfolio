@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 3;
   top: 0;
-  height: 100px;
+  height: 80px;
   width: 100%;
   &__container {
     display: flex;
@@ -58,6 +58,7 @@
     display: none;
   }
   .active {
+    transition: 0.5s background-color linear;
     padding: 2px 5px;
     border-radius: 20px;
     background-color: $color-secondary;

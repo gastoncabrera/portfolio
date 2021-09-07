@@ -1,10 +1,25 @@
 import { skills, proyects } from "../const";
+import { animated, useSpring } from "react-spring";
 
 export default function Hero() {
   const someSkills = skills.filter((item) => item.id <= 3);
   const someProyects = proyects.filter((proyect) => proyect.id <= 2);
   const someSkillFloat = skills.filter((skl) => skl.id <= 4);
-
+  const styles = useSpring({
+    from: { x: -500 },
+    to: { x: 0 },
+    config: { frequency: 3 },
+  });
+  const skillProyectAnimation = useSpring({
+    from: { x: 500 },
+    to: { x: 0 },
+    config: { frequency: 3 },
+  });
+  const heroLinksAnimation = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { frequency: 4 },
+  });
   return (
     <>
       <section className="hero">
@@ -23,13 +38,13 @@ export default function Hero() {
               </h1>
               <div className="skill__container">
                 {someSkills.map((item) => (
-                  <div key={item.id}>
+                  <animated.div style={skillProyectAnimation} key={item.id}>
                     <img
                       src={item.img}
                       alt={item.skill}
                       className={`hero__skillRight ${item.skill}`}
                     />
-                  </div>
+                  </animated.div>
                 ))}
               </div>
               <h1 className="hero__proyectsTitle" id="proyects">
@@ -43,20 +58,23 @@ export default function Hero() {
                     rel="noreferrer"
                     key={proyect.id}
                   >
-                    <div className="hero__proyect">
+                    <animated.div
+                      style={skillProyectAnimation}
+                      className="hero__proyect"
+                    >
                       <img
                         className="hero__proyectImage"
                         src={proyect.img}
                         alt={proyect.title}
                       />
-                    </div>
+                    </animated.div>
                   </a>
                 ))}
               </div>
             </div>
           </div>
           <div className="hero__containerLeft">
-            <div className="hero__imageContainer">
+            <animated.div style={styles} className="hero__imageContainer">
               <img
                 src="https://i.ibb.co/L9Q5GMT/perfinpng2-1.png"
                 alt="foto de perfil de Gaston Cabrera"
@@ -71,10 +89,13 @@ export default function Hero() {
                   />
                 </div>
               ))}
-            </div>
+            </animated.div>
             <div className="hero__contactContainer">
               <nav className="hero__contact">
-                <ul className="hero__contactList">
+                <animated.ul
+                  style={heroLinksAnimation}
+                  className="hero__contactList"
+                >
                   <li className="hero__contactItem">
                     <a
                       href="mailto:cabreragastonivan31@gmail.com"
@@ -126,12 +147,16 @@ export default function Hero() {
                       </svg>
                     </a>
                   </li>
-                </ul>
+                </animated.ul>
               </nav>
             </div>
           </div>
         </div>
-        <a href="https://www.canva.com/design/DAEcCloZWlw/tAFCOVR_J4mHqA6ssd7DtQ/view?utm_content=DAEcCloZWlw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+        <a
+          href="https://www.canva.com/design/DAEcCloZWlw/tAFCOVR_J4mHqA6ssd7DtQ/view?utm_content=DAEcCloZWlw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="curriculum" title="Curriculum">
             <svg
               xmlns="http://www.w3.org/2000/svg"

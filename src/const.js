@@ -96,6 +96,16 @@ const proyects = [
     demoLink: "https://gastoncabrera.github.io/listadecontactos/",
     repoLikn: "listadecontactos",
   },
+  {
+    id: 7,
+    title: "Lista de tareas",
+    img: "https://i.ibb.co/0Qk9x60/todo-list.png",
+    description:
+      "Es una pagina la cual podes anotar todas tus tareas a realizar y marcarlas al completarlas.",
+    skills: [1, 2],
+    demoLink: "https://gastoncabrera.github.io/todolist/#/",
+    repoLikn: "todolist",
+  },
 ];
 const allProyects = proyects.map((proyectItem) => {
   const _skills = skills.filter((skillItem) =>
