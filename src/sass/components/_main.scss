@@ -1,36 +1,39 @@
 .main {
   background-color: $color-tertiary;
-  padding: 20px 0;
+  padding-bottom: 20px;
   &__skills {
-    height: 30px;
-    cursor: pointer;
+    margin: 3px 6px;
+    height: 50px;
   }
   &__title {
     @include title;
   }
   &__containerSkills {
-    max-width: 920px;
+    max-width: 1300px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   &__proyects {
     padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   &__titleProyects {
     @include title;
   }
   &__container {
     padding-top: 50px;
+    padding-left: 12px;
+    padding-bottom: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
 @include breakpoint(md) {
+  .main {
+    padding-bottom: 60px;
+  }
   .main__titleProyects,
   .main__title {
     font-size: 40px;
@@ -40,6 +43,9 @@
   }
 }
 @include breakpoint(xl) {
+  .main {
+    padding-bottom: 90px;
+  }
   .main__titleProyects,
   .main__title {
     font-size: 50px;

@@ -18,8 +18,8 @@ export default function Header({
           <div className="logo__container left">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="1.5rem"
-              height="1.5rem"
+              width="30px"
+              height="30px"
               fill="currentColor"
               className="angleBrackets left"
               viewBox="0 0 16 16"
@@ -35,8 +35,8 @@ export default function Header({
             <span className="logo__forwardSlash">/</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="1.5rem"
-              height="1.5rem"
+              width="30px"
+              height="30px"
               fill="currentColor"
               className="angleBrackets right"
               viewBox="0 0 16 16"
@@ -95,8 +95,8 @@ export default function Header({
         <div className="list__container">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="1.5rem"
-            height="1.5rem"
+            width="40px"
+            height="40px"
             fill="white"
             className="list"
             viewBox="0 0 16 16"

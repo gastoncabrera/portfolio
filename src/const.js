@@ -11,9 +11,10 @@ const skills = [
   },
   {
     id: 3,
-    skill: "BOOTSTRAP",
-    img: "https://i.ibb.co/cJVWXn5/Bootstrap-4-3-1.png",
+    skill: "VUE",
+    img: "https://i.ibb.co/QN87p7V/vue.png",
   },
+
   {
     id: 4,
     skill: "JAVASCRIPT",
@@ -34,6 +35,16 @@ const skills = [
     skill: "GIT",
     img: "https://i.ibb.co/B3tJPXS/pngegg-2-1.png",
   },
+  {
+    id: 8,
+    skill: "BOOTSTRAP",
+    img: "https://i.ibb.co/cJVWXn5/Bootstrap-4-3-1.png",
+  },
+  {
+    id: 9,
+    skill: "NUXT",
+    img: "https://i.ibb.co/SdTXN6k/nuxt.png",
+  },
 ];
 
 const proyects = [
@@ -48,6 +59,16 @@ const proyects = [
   },
   {
     id: 2,
+    title: "Flow",
+    img: "https://i.ibb.co/P5wDYbZ/Flow.png",
+    description:
+      "Es un clone de la pagina de Flow la cual se ven todos los proyectos blockchain en el cual estan participando.",
+    skills: [3, 9, 2],
+    demoLink: "https://gastoncabrera.github.io/flow/",
+    repoLikn: "flow",
+  },
+  {
+    id: 3,
     title: "Rick and Morty API",
     img: "https://i.ibb.co/DLsf3hG/Rick-And-Morty.png",
     description:
@@ -57,7 +78,7 @@ const proyects = [
     demoLink: "https://gastoncabrera.github.io/rickandmorty/",
   },
   {
-    id: 3,
+    id: 4,
     title: "BatataBit",
     img: "https://i.ibb.co/QYZrbjV/Batatabit.png",
     description:
@@ -67,7 +88,7 @@ const proyects = [
     repoLikn: "batatabit",
   },
   {
-    id: 4,
+    id: 5,
     title: "Google Clone",
     img: "https://i.ibb.co/dWpmsPz/Google-Clone.png",
     description:
@@ -77,17 +98,17 @@ const proyects = [
     repoLikn: "googleclone",
   },
   {
-    id: 5,
+    id: 6,
     title: "Aplicación de Gastos",
     img: "https://i.ibb.co/SPYv21y/Mis-Gastos.png",
     description:
       "Es una aplicacion de gastos la cual toda la informacion se sube en el local Storage.",
-    skills: [3, 4, 5, 6],
+    skills: [8, 4, 5, 6],
     demoLink: "https://gastoncabrera.github.io/aplicaciondegastos/",
     repoLikn: "aplicaciondegastos",
   },
   {
-    id: 6,
+    id: 7,
     title: "Lista de contactos",
     img: "https://i.ibb.co/Q8Cntks/listadecontatos.png",
     description:
@@ -97,7 +118,7 @@ const proyects = [
     repoLikn: "listadecontactos",
   },
   {
-    id: 7,
+    id: 8,
     title: "Lista de tareas",
     img: "https://i.ibb.co/0Qk9x60/todo-list.png",
     description:
@@ -108,9 +129,7 @@ const proyects = [
   },
 ];
 const allProyects = proyects.map((proyectItem) => {
-  const _skills = skills.filter((skillItem) =>
-    proyectItem.skills.includes(skillItem.id)
-  );
+  const _skills = skills.filter((skillItem) => proyectItem.skills.includes(skillItem.id));
   return {
     ...proyectItem,
     skill: _skills,

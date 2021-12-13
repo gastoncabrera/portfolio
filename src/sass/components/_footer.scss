@@ -15,6 +15,11 @@
     width: 35px;
     height: 35px;
     margin: 0 10px;
+    transition: 300ms linear;
+    &:hover {
+      background-color: $color-secondary;
+      transition: 300ms linear;
+    }
   }
   &__link {
     display: flex;
@@ -25,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-top: 20px;
   }
 }
 .close {
@@ -42,6 +47,9 @@
   .footer__links {
     height: 50px;
     width: 50px;
+  }
+  .footer__container {
+    padding: 30px 0;
   }
   .emailFooter,
   .linkedinFooter,

@@ -1,6 +1,8 @@
 import { skills, proyects } from "../const";
 import { animated, useSpring } from "react-spring";
 
+
+
 export default function Hero() {
   const someSkills = skills.filter((item) => item.id <= 3);
   const someProyects = proyects.filter((proyect) => proyect.id <= 2);
@@ -103,10 +105,10 @@ export default function Hero() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        fill="#f6f7f8"
+                        width="40px"
+                        height="40px"
                         className="email"
+                        fill="#f6f7f8"
                         viewBox="0 0 16 16"
                       >
                         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
@@ -120,8 +122,8 @@ export default function Hero() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
+                        width="40px"
+                        height="40px"
                         fill="#f6f7f8"
                         className="github"
                         viewBox="0 0 16 16"
@@ -137,8 +139,8 @@ export default function Hero() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
+                        width="40px"
+                        height="40px"
                         fill="#f6f7f8"
                         className="linkedin"
                         viewBox="0 0 16 16"

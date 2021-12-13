@@ -7,7 +7,7 @@ export default function Main() {
     skills.map((item, index, arrayItSelf) => {
       return {
         from: {
-          transform: `translateX(${index % 2 ? 1000 : -1000}%)`,
+          transform: `translateX(${index % 2 ? 400 : -400}%)`,
         },
         transform: "translateX(0)",
         config: { frequency: 2 },
