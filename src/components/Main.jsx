@@ -1,6 +1,10 @@
 import { useSprings, animated } from "react-spring";
 import Card from "./Card";
 import { allProyects, skills } from "../const";
+import Fade from 'react-reveal/Fade';
+
+
+
 export default function Main() {
   const appearAnimations = useSprings(
     skills.length,
@@ -38,8 +42,10 @@ export default function Main() {
           </h1>
           <div className="card">
             {allProyects.map((proyect) => (
+              // <Fade left >
+              // </Fade>
               <Card proyects={proyect} key={proyect.id} />
-            ))}
+              ))}
           </div>
         </div>
       </div>

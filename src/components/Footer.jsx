@@ -1,9 +1,12 @@
+import Fade from 'react-reveal/Fade';
+
 export default function Footer() {
   return (
     <>
       <div className="footer">
         <div className="footer__container" id="contact">
           <div className="footer__linksContainer">
+          <Fade left>
             <div className="footer__links">
               <a href="mailto:cabreragastonivan31@gmail.com">
                 <svg
@@ -60,6 +63,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+            </Fade>
           </div>
           <div className="footer__close">
             <div className="close">

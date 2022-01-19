@@ -1,13 +1,17 @@
+import Fade from 'react-reveal/Fade';
+
+
 export default function Card({ proyects }) {
   return (
     <>
+    <Fade left>
       <div className="card__container">
         <div className="card__containerImage">
           <img
             src={proyects.img}
             alt={proyects.title}
             className="card__image"
-          />
+            />
         </div>
         <div className="card__containerInfo">
           <h4 className="card__title">{proyects.title}</h4>
@@ -26,7 +30,7 @@ export default function Card({ proyects }) {
             target="_blank"
             rel="noreferrer"
             className="card__link demo"
-          >
+            >
             Demo
           </a>
           <a
@@ -34,11 +38,12 @@ export default function Card({ proyects }) {
             target="_blank"
             rel="noreferrer"
             className="card__link code"
-          >
+            >
             Code
           </a>
         </div>
       </div>
+            </Fade>
     </>
   );
 }
