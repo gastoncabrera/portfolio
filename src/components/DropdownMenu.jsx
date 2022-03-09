@@ -8,11 +8,7 @@ export default function DropdownMenu({ dropDawn, menuDropDawn }) {
         <nav className="menuDropDawn__container">
           <ul className="menuDropDawn__list">
             <li className="menuDropDawn__item">
-              <a
-                href="#"
-                className="menuDropDawn__link"
-                onClick={childrenModifyMenu}
-              >
+              <a href="/" className="menuDropDawn__link" onClick={childrenModifyMenu}>
                 Inicio
               </a>
             </li>

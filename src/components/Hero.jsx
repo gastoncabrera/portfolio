@@ -1,8 +1,6 @@
 import { skills, proyects } from "../const";
 import { animated, useSpring } from "react-spring";
 
-
-
 export default function Hero() {
   const someSkills = skills.filter((item) => item.id <= 3);
   const someProyects = proyects.filter((proyect) => proyect.id <= 2);
@@ -24,7 +22,7 @@ export default function Hero() {
   });
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="inicio">
         <div className="hero__container">
           <div className="hero__containerRight">
             <div className="hero__descriptionContainer">
@@ -60,10 +58,7 @@ export default function Hero() {
                     rel="noreferrer"
                     key={proyect.id}
                   >
-                    <animated.div
-                      style={skillProyectAnimation}
-                      className="hero__proyect"
-                    >
+                    <animated.div style={skillProyectAnimation} className="hero__proyect">
                       <img
                         className="hero__proyectImage"
                         src={proyect.img}
@@ -94,10 +89,7 @@ export default function Hero() {
             </animated.div>
             <div className="hero__contactContainer">
               <nav className="hero__contact">
-                <animated.ul
-                  style={heroLinksAnimation}
-                  className="hero__contactList"
-                >
+                <animated.ul style={heroLinksAnimation} className="hero__contactList">
                   <li className="hero__contactItem">
                     <a
                       href="mailto:cabreragastonivan31@gmail.com"

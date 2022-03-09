@@ -13,7 +13,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   &__proyects {
     padding-top: 50px;
@@ -40,6 +40,9 @@
   }
   .main__skills {
     height: 60px;
+  }
+  .main__containerSkills {
+    justify-content: space-between;
   }
 }
 @include breakpoint(xl) {

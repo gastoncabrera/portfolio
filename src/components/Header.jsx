@@ -52,10 +52,8 @@ export default function Header({
           <ul className="navbar__list">
             <li className="navbar__item">
               <a
-                href="#"
-                className={
-                  positionInit ? "navbar__link active" : "navbar__link"
-                }
+                href="#inicio"
+                className={positionInit ? "navbar__link active" : "navbar__link"}
               >
                 Inicio
               </a>
@@ -63,9 +61,7 @@ export default function Header({
             <li className="navbar__item habilidades">
               <a
                 href="#skills"
-                className={
-                  positionskill ? "navbar__link active" : "navbar__link"
-                }
+                className={positionskill ? "navbar__link active" : "navbar__link"}
               >
                 Habilidades
               </a>
@@ -73,9 +69,7 @@ export default function Header({
             <li className="navbar__item proyecto">
               <a
                 href="#proyects"
-                className={
-                  positionproyect ? "navbar__link active" : "navbar__link"
-                }
+                className={positionproyect ? "navbar__link active" : "navbar__link"}
               >
                 Proyectos
               </a>
@@ -83,9 +77,7 @@ export default function Header({
             <li className="navbar__item">
               <a
                 href="#contact"
-                className={
-                  positioncontact ? "navbar__link active" : "navbar__link"
-                }
+                className={positioncontact ? "navbar__link active" : "navbar__link"}
               >
                 Contacto
               </a>
