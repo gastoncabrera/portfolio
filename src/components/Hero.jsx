@@ -94,6 +94,7 @@ export default function Hero() {
                     <a
                       href="mailto:cabreragastonivan31@gmail.com"
                       className="hero__contactLink"
+                      target="_blank"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -111,6 +112,7 @@ export default function Hero() {
                     <a
                       href="https://github.com/gastoncabrera"
                       className="hero__contactLink"
+                      target="_blank"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +130,7 @@ export default function Hero() {
                     <a
                       href="https://www.linkedin.com/in/gaston-cabrera-b39a17204/"
                       className="hero__contactLink"
+                      target="_blank"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

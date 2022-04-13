@@ -18,8 +18,10 @@ export default function Main() {
   return (
     <>
       <div className="main">
-        <div className="main__container" id="skill">
-          <h1 className="main__title">Habilidades</h1>
+        <div className="main__container">
+          <h1 className="main__title" id="skill">
+            Habilidades
+          </h1>
           <div className="main__containerSkills">
             {skills.map((item, index) => (
               <animated.div style={appearAnimations[index]} key={item.id}>
@@ -33,8 +35,8 @@ export default function Main() {
             ))}
           </div>
         </div>
-        <div className="main__proyects" id="proyect">
-          <h1 className="main__titleProyects" id="image">
+        <div className="main__proyects">
+          <h1 className="main__titleProyects" id="proyect">
             Proyectos
           </h1>
           <div className="card">

@@ -22,7 +22,10 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer__links">
-                <a href="https://www.linkedin.com/in/gaston-cabrera-b39a17204/">
+                <a
+                  href="https://www.linkedin.com/in/gaston-cabrera-b39a17204/"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -36,7 +39,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer__links">
-                <a href="https://www.instagram.com/gcabrera31/?hl=es">
+                <a href="https://www.instagram.com/gcabrera31/?hl=es" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -50,7 +53,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer__links">
-                <a href="https://twitter.com/GiCabrera31">
+                <a href="https://twitter.com/GiCabrera31" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

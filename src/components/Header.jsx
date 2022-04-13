@@ -1,16 +1,4 @@
-import { useState } from "react";
-import DropdownMenu from "./DropdownMenu";
-export default function Header({
-  positionproyect,
-  positioncontact,
-  positionskill,
-  positionInit,
-}) {
-  const [menu, setMenu] = useState(false);
-  function MenuBurguer() {
-    setMenu(!menu);
-  }
-
+export default function Header({ setMenu, menu }) {
   return (
     <header className="header" id="header">
       <div className="header__container">
@@ -51,34 +39,22 @@ export default function Header({
         <nav className="navbar">
           <ul className="navbar__list">
             <li className="navbar__item">
-              <a
-                href="#inicio"
-                className={positionInit ? "navbar__link active" : "navbar__link"}
-              >
+              <a href="#inicio" className={"navbar__link"}>
                 Inicio
               </a>
             </li>
             <li className="navbar__item habilidades">
-              <a
-                href="#skills"
-                className={positionskill ? "navbar__link active" : "navbar__link"}
-              >
+              <a href="#skill" className={"navbar__link"}>
                 Habilidades
               </a>
             </li>
             <li className="navbar__item proyecto">
-              <a
-                href="#proyects"
-                className={positionproyect ? "navbar__link active" : "navbar__link"}
-              >
+              <a href="#proyect" className={"navbar__link"}>
                 Proyectos
               </a>
             </li>
             <li className="navbar__item">
-              <a
-                href="#contact"
-                className={positioncontact ? "navbar__link active" : "navbar__link"}
-              >
+              <a href="#contact" className={"navbar__link"}>
                 Contacto
               </a>
             </li>
@@ -92,7 +68,7 @@ export default function Header({
             fill="white"
             className="list"
             viewBox="0 0 16 16"
-            onClick={MenuBurguer}
+            onClick={() => setMenu(!menu)}
           >
             <path
               fill="evenodd"
@@ -100,7 +76,6 @@ export default function Header({
             />
           </svg>
         </div>
-        <DropdownMenu dropDawn={menu} menuDropDawn={() => setMenu(!menu)} />
       </div>
     </header>
   );

@@ -93,10 +93,12 @@
   left: 20%;
 }
 .curriculum {
-  width: 30px;
-  height: 30px;
-  background-color: $color-fifth;
+  width: 40px;
+  height: 40px;
+  background-color: #75bfe9;
   position: fixed;
+  z-index: 100;
+  border: 1px solid $color-secondary;
   bottom: 20px;
   left: 20px;
   border-radius: 50%;
@@ -104,8 +106,9 @@
   align-items: center;
   justify-content: center;
   transition: 300ms linear;
+  cursor: pointer;
   &:hover {
-    background-color: $color-secondary;
+    background-color: #00a2fff2;
     transition: 300ms linear;
   }
 }
@@ -116,6 +119,11 @@
   50% {
     transform: translateY(20px);
   }
+}
+
+.cvIcon {
+  height: 20px;
+  width: 20px;
 }
 @include breakpoint(sm) {
   .hero {
@@ -155,18 +163,19 @@
       justify-content: center;
       align-items: center;
       margin-right: 100px;
+      padding: 10px;
     }
     &__proyectsContainer {
       display: flex;
-      margin-left: 40px;
+      margin-left: 0px;
     }
     &__proyectImage {
-      width: 80px;
+      width: 180px;
       object-fit: cover;
       border-radius: 20px;
       background-color: #24282f;
       box-shadow: 2px 2px rgba(black, 0.2);
-      padding: 30px 40px;
+      padding: 25px 35px;
       transition: 300ms linear;
       &:hover {
         transition: 300ms linear;
@@ -265,13 +274,16 @@
     width: 55px;
   }
   .curriculum {
-    left: 150px;
-    cursor: pointer;
+    left: 50px;
   }
 }
 
 @include breakpoint(xxl) {
   .hero__image {
     width: 320px;
+  }
+
+  .curriculum {
+    left: 150px;
   }
 }

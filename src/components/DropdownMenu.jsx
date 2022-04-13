@@ -1,14 +1,18 @@
-export default function DropdownMenu({ dropDawn, menuDropDawn }) {
-  const active = dropDawn;
-  const childrenModifyMenu = menuDropDawn;
+export default function DropdownMenu({ menu, setMenu }) {
+  // const active = dropDawn;
+  // const childrenModifyMenu = menuDropDawn;
 
   return (
     <>
-      <div className={active ? "menuDropDawn" : "menuDropDawn__disabled"}>
+      <div className={menu ? "menuDropDawn" : "menuDropDawn__disabled"}>
         <nav className="menuDropDawn__container">
           <ul className="menuDropDawn__list">
             <li className="menuDropDawn__item">
-              <a href="/" className="menuDropDawn__link" onClick={childrenModifyMenu}>
+              <a
+                href="#inicio"
+                className="menuDropDawn__link"
+                onClick={() => setMenu(false)}
+              >
                 Inicio
               </a>
             </li>
@@ -16,7 +20,7 @@ export default function DropdownMenu({ dropDawn, menuDropDawn }) {
               <a
                 href="#skill"
                 className="menuDropDawn__link"
-                onClick={childrenModifyMenu}
+                onClick={() => setMenu(false)}
               >
                 Habilidades
               </a>
@@ -25,7 +29,7 @@ export default function DropdownMenu({ dropDawn, menuDropDawn }) {
               <a
                 href="#proyect"
                 className="menuDropDawn__link"
-                onClick={childrenModifyMenu}
+                onClick={() => setMenu(false)}
               >
                 Proyectos
               </a>
@@ -34,7 +38,7 @@ export default function DropdownMenu({ dropDawn, menuDropDawn }) {
               <a
                 href="#contact"
                 className="menuDropDawn__link"
-                onClick={childrenModifyMenu}
+                onClick={() => setMenu(false)}
               >
                 Contacto
               </a>
