@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   color: $color-secondary;
+  user-select: none;
   &__container {
     font-size: 24px;
     display: flex;

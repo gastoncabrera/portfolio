@@ -75,6 +75,10 @@
   }
 }
 
+.card__title .demo:hover {
+  color: red;
+}
+
 @include breakpoint(lg) {
   .card {
     gap: 25px;

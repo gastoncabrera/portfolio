@@ -1,5 +1,8 @@
 import { skills, proyects } from "../const";
 import { animated, useSpring } from "react-spring";
+import Perfil from "../assets/perfinpng2.png";
+const Image = require.context("../assets/image/", true);
+const Icon = require.context("../assets/icons/", true);
 
 export default function Hero() {
   const someSkills = skills.filter((item) => item.id <= 3);
@@ -40,7 +43,7 @@ export default function Hero() {
                 {someSkills.map((item) => (
                   <animated.div style={skillProyectAnimation} key={item.id}>
                     <img
-                      src={item.img}
+                      src={Icon(`./${item.img}`)}
                       alt={item.skill}
                       className={`hero__skillRight ${item.skill}`}
                     />
@@ -61,7 +64,7 @@ export default function Hero() {
                     <animated.div style={skillProyectAnimation} className="hero__proyect">
                       <img
                         className="hero__proyectImage"
-                        src={proyect.img}
+                        src={Image(`./${proyect.img}`)}
                         alt={proyect.title}
                       />
                     </animated.div>
@@ -73,14 +76,14 @@ export default function Hero() {
           <div className="hero__containerLeft">
             <animated.div style={styles} className="hero__imageContainer">
               <img
-                src="https://i.ibb.co/L9Q5GMT/perfinpng2-1.png"
+                src={Perfil}
                 alt="foto de perfil de Gaston Cabrera"
                 className="hero__image"
               />
               {someSkillFloat.map((skl) => (
                 <div className="hero__containerSkill" key={skl.id}>
                   <img
-                    src={skl.img}
+                    src={Icon(`./${skl.img}`)}
                     alt={skl.skill}
                     className={`hero__skill ${skl.skill}`}
                   />
@@ -95,6 +98,7 @@ export default function Hero() {
                       href="mailto:cabreragastonivan31@gmail.com"
                       className="hero__contactLink"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -113,6 +117,7 @@ export default function Hero() {
                       href="https://github.com/gastoncabrera"
                       className="hero__contactLink"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +136,7 @@ export default function Hero() {
                       href="https://www.linkedin.com/in/gaston-cabrera-b39a17204/"
                       className="hero__contactLink"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

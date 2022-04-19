@@ -1,6 +1,7 @@
 import { useSprings, animated } from "react-spring";
 import Card from "./Card";
 import { allProyects, skills } from "../const";
+const Image = require.context("../assets/icons/", true);
 
 export default function Main() {
   const appearAnimations = useSprings(
@@ -26,7 +27,8 @@ export default function Main() {
             {skills.map((item, index) => (
               <animated.div style={appearAnimations[index]} key={item.id}>
                 <img
-                  src={item.img}
+                  // src={item.img}
+                  src={Image(`./${item.img}`)}
                   alt={item.skill}
                   className="main__skills"
                   title={item.skill}

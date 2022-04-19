@@ -1,4 +1,6 @@
 import Fade from "react-reveal/Fade";
+import Img from "../assets/image/Batatabit.png";
+const Image = require.context("../assets/image/", true);
 
 export default function Card({ proyects }) {
   return (
@@ -6,7 +8,11 @@ export default function Card({ proyects }) {
       <Fade>
         <div className="card__container">
           <div className="card__containerImage">
-            <img src={proyects.img} alt={proyects.title} className="card__image" />
+            <img
+              src={Image(`./${proyects.img}`)}
+              alt={proyects.title}
+              className="card__image"
+            />
           </div>
           <div className="card__containerInfo">
             <h4 className="card__title">{proyects.title}</h4>
@@ -28,14 +34,18 @@ export default function Card({ proyects }) {
             >
               Demo
             </a>
-            <a
-              href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
-              target="_blank"
-              rel="noreferrer"
-              className="card__link code"
-            >
-              Code
-            </a>
+            {proyects.repoLikn === "null" ? (
+              <></>
+            ) : (
+              <a
+                href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
+                target="_blank"
+                rel="noreferrer"
+                className="card__link code"
+              >
+                Code
+              </a>
+            )}
           </div>
         </div>
       </Fade>
