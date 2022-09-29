@@ -1,3 +1,5 @@
+import React  from "react";
+
 export default function Header({ setMenu, menu }) {
   return (
     <header className="header" id="header">

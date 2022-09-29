@@ -1,6 +1,6 @@
 import Fade from "react-reveal/Fade";
-import Img from "../assets/image/Batatabit.png";
-const Image = require.context("../assets/image/", true);
+import React  from "react";
+
 
 export default function Card({ proyects }) {
   return (
@@ -9,8 +9,9 @@ export default function Card({ proyects }) {
         <div className="card__container">
           <div className="card__containerImage">
             <img
-              src={Image(`./${proyects.img}`)}
+              src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${proyects.image}`}
               alt={proyects.title}
+              loading="lazy"
               className="card__image"
             />
           </div>
@@ -18,7 +19,7 @@ export default function Card({ proyects }) {
             <h4 className="card__title">{proyects.title}</h4>
             <div className="card__skillsContainer">
               {proyects.skill.map((item) => (
-                <p key={item.id} className="card__skills">
+                <p key={item._id} className="card__skills">
                   {item.skill}
                 </p>
               ))}
@@ -27,18 +28,18 @@ export default function Card({ proyects }) {
           </div>
           <div className="card__linksContainer">
             <a
-              href={proyects.demoLink}
+              href={proyects.demolink}
               target="_blank"
               rel="noreferrer"
               className="card__link demo"
             >
               Demo
             </a>
-            {proyects.repoLikn === "null" ? (
+            {proyects.repolink === "null" ? (
               <></>
             ) : (
               <a
-                href={`https://github.com/gastoncabrera/${proyects.repoLikn}`}
+                href={`https://github.com/gastoncabrera/${proyects.repolink}`}
                 target="_blank"
                 rel="noreferrer"
                 className="card__link code"

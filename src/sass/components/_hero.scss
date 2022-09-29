@@ -1,7 +1,8 @@
 .hero {
   padding-top: 130px;
   background-color: $color-primary;
-  height: calc(100vh - 130px);
+  min-height: calc(100vh - 130px);
+  height: 100%;
   &__container {
     display: flex;
     flex-direction: column;

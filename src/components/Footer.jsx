@@ -1,4 +1,5 @@
 import Fade from "react-reveal/Fade";
+import React  from "react";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className="footer__linksContainer">
             <Fade>
               <div className="footer__links">
-                <a href="mailto:cabreragastonivan31@gmail.com">
+                <a href="mailto:cabreragastonivan31@gmail.com" target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -24,7 +25,7 @@ export default function Footer() {
               <div className="footer__links">
                 <a
                   href="https://www.linkedin.com/in/gaston-cabrera-b39a17204/"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer__links">
-                <a href="https://www.instagram.com/gcabrera31/?hl=es" target="_blank">
+                <a href="https://www.instagram.com/gcabrera31/?hl=es" target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -53,7 +54,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="footer__links">
-                <a href="https://twitter.com/GiCabrera31" target="_blank">
+                <a href="https://twitter.com/GiCabrera31" target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

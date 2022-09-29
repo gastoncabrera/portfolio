@@ -1,6 +1,6 @@
+import React  from "react";
+
 export default function DropdownMenu({ menu, setMenu }) {
-  // const active = dropDawn;
-  // const childrenModifyMenu = menuDropDawn;
 
   return (
     <>
