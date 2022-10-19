@@ -1,5 +1,7 @@
 import Fade from "react-reveal/Fade";
-import React  from "react";
+import React from "react";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 export default function Card({ proyects }) {
@@ -8,15 +10,21 @@ export default function Card({ proyects }) {
       <Fade>
         <div className="card__container">
           <div className="card__containerImage">
-            <img
-              src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${proyects.image}`}
-              alt={proyects.title}
-              loading="lazy"
-              className="card__image"
-            />
+            {
+              !proyects ?
+                <Skeleton className="card__image" borderRadius='0.25rem' baseColor="#b0b0b0" highlightColor="#444" />
+                :
+                <img
+                  src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${proyects.image}`}
+                  alt={proyects.title}
+                  loading="lazy"
+                  className="card__image"
+                />
+            }
+
           </div>
           <div className="card__containerInfo">
-            <h4 className="card__title">{proyects.title}</h4>
+            <h4 className="card__title">{proyects.title || <Skeleton baseColor="#b0b0b0" highlightColor="#444" />}</h4>
             <div className="card__skillsContainer">
               {proyects.skill.map((item) => (
                 <p key={item._id} className="card__skills">
@@ -24,7 +32,7 @@ export default function Card({ proyects }) {
                 </p>
               ))}
             </div>
-            <p className="card__description">{proyects.description}</p>
+            <p className="card__description">{proyects.description || <Skeleton baseColor="#b0b0b0" highlightColor="#444" /> }</p>
           </div>
           <div className="card__linksContainer">
             <a

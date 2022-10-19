@@ -1,61 +1,48 @@
-import React,{useEffect, useState}  from "react";
-import axios from "axios";
+import React from "react";
 import { animated, useSpring } from "react-spring";
 import Perfil from "../assets/perfinpng2.png";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
-const baseURL = "https://floating-spire-53343.herokuapp.com/skill";
-const URL = "https://floating-spire-53343.herokuapp.com/proyect";
+export default function Hero({ skill, proyects }) {
 
-export default function Hero() {
-  const [post, setPost] = useState(null);
-  const [proyects, setProyects] = useState(null);
-  const someSkills = ()=>{
-    if(!post) return 
+  const someSkills = () => {
+    if (!skill) return
     else {
       let res = []
-      const skill = post.find(element => element._id === '6334a070372f9a7c1e787ca4')
-      const skill_one = post.find(element => element._id === '6334a084372f9a7c1e787dd2')
-      const skill_two = post.find(element => element._id === '6334a08c372f9a7c1e787e3f')
-      res.push(skill,skill_one,skill_two)
+      const skill_one = skill.find(element => element._id === '6334a084372f9a7c1e787dd2')
+      const skill_two = skill.find(element => element._id === '6334a08c372f9a7c1e787e3f')
+      const skill_three = skill.find(element => element._id === '6334a070372f9a7c1e787ca4')
+      res.push(skill_three, skill_one, skill_two)
       return res
     }
   }
 
-  const someSkillFloat = ()=>{
-    if(!post) return 
+
+  const someSkillFloat = () => {
+    if (!skill) return
     else {
       let res = []
-      const skillfloat = post.find(element => element._id === '6334a070372f9a7c1e787ca4')
-      const skillfloat_one = post.find(element => element._id === '6334a084372f9a7c1e787dd2')
-      const skillfloat_two = post.find(element => element._id === '6334a08c372f9a7c1e787e3f')
-      const skillfloat_three = post.find(element => element._id === '6334a043372f9a7c1e787a0b')
-      res.push(skillfloat,skillfloat_one,skillfloat_two,skillfloat_three)
+      const skillfloat = skill.find(element => element._id === '6334a070372f9a7c1e787ca4')
+      const skillfloat_one = skill.find(element => element._id === '6334a084372f9a7c1e787dd2')
+      const skillfloat_two = skill.find(element => element._id === '6334a08c372f9a7c1e787e3f')
+      const skillfloat_three = skill.find(element => element._id === '6334a043372f9a7c1e787a0b')
+      res.push(skillfloat, skillfloat_one, skillfloat_two, skillfloat_three)
       return res
     }
   }
 
-  const someProyects = ()=>{
-    if(!proyects) return 
+  const someProyects = () => {
+    if (!proyects) return
     else {
       let res = []
       const proyect = proyects.find(element => element._id === '6334e1c9daab3183fc34fd3c')
       const proyect_one = proyects.find(element => element._id === '6335ac70587416ae543ecb4b')
-      res.push(proyect,proyect_one)
+      res.push(proyect, proyect_one)
       return res
     }
   }
 
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-
-  useEffect(() => {
-    axios.get(URL).then((response) => {
-      setProyects(response.data);
-    });
-  }, []);
   const styles = useSpring({
     from: { x: -500 },
     to: { x: 0 },
@@ -83,27 +70,48 @@ export default function Hero() {
                 Hola mi nombre es
                 <h1 className="hero__name">Gaston Cabrera</h1>
               </span>
-              <p className="hero__workPosition">Soy Front-end developer</p>
+              <p className="hero__workPosition">Soy Full-Stack developer</p>
             </div>
             <div className="hero__skillAndProyects">
               <h1 className="skill__title" id="skills">
                 Algunas Habilidades
               </h1>
               <div className="skill__container">
-                {someSkills()?.map((item) => (
-                  <animated.div style={skillProyectAnimation} key={item._id}>
-                    <img
-                      src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${item.image}`} 
-                      alt={item.skill}
-                      className={`hero__skillRight ${item.skill}`}
-                    />
-                 </animated.div>
-                ))}
+                {
+                  !someSkills() ?
+                    <animated.div
+                      style={skillProyectAnimation}>
+                      <Skeleton className={`hero__skillRight`} inline={true} borderRadius='1.25rem' height={70} width={50} baseColor="#b0b0b0" highlightColor="#444" count={3} />
+                    </animated.div>
+                    :
+                    someSkills()?.map((item) => (
+                      <animated.div
+                        style={skillProyectAnimation}
+                        key={item._id}>
+                        <img
+                          src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${item.image}`}
+                          alt={item.skill}
+                          className={`hero__skillRight ${item.skill}`}
+                        />
+                      </animated.div>
+                    ))
+                }
               </div>
               <h1 className="hero__proyectsTitle" id="proyects">
                 Algunos Proyectos
               </h1>
               <div className="hero__proyectsContainer">
+
+                {
+                  !someProyects() && 
+                  <div
+                  >
+                    <animated.div style={skillProyectAnimation} className="hero__proyect">
+                    <Skeleton className="hero__proyectImage" inline={true} baseColor="#b0b0b0" highlightColor="#444" width={60} />
+                    </animated.div>
+                  </div>
+                }
+
                 {someProyects()?.map(item =>
                   <a
                     href={item.demolink}
@@ -112,6 +120,7 @@ export default function Hero() {
                     key={item._id}
                   >
                     <animated.div style={skillProyectAnimation} className="hero__proyect">
+
                       <img
                         className="hero__proyectImage"
                         src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${item.image}`}
@@ -125,7 +134,10 @@ export default function Hero() {
             </div>
           </div>
           <div className="hero__containerLeft">
-            <animated.div style={styles} className="hero__imageContainer">
+            <animated.div
+              style={styles}
+              className="hero__imageContainer"
+            >
               <img
                 src={Perfil}
                 alt="foto de perfil de Gaston Cabrera"
@@ -134,7 +146,7 @@ export default function Hero() {
               {someSkillFloat()?.map((skl) => (
                 <div className="hero__containerSkill" key={skl._id}>
                   <img
-                    src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${skl.image}`} 
+                    src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${skl.image}`}
                     alt={skl.skill}
                     className={`hero__skill ${skl.skill}`}
                   />
@@ -143,7 +155,9 @@ export default function Hero() {
             </animated.div>
             <div className="hero__contactContainer">
               <nav className="hero__contact">
-                <animated.ul style={heroLinksAnimation} className="hero__contactList">
+                <animated.ul
+                  style={heroLinksAnimation}
+                  className="hero__contactList">
                   <li className="hero__contactItem">
                     <a
                       href="mailto:cabreragastonivan31@gmail.com"
