@@ -33,6 +33,27 @@ function Home() {
 
   const [menu, setMenu] = useState(false);
 
+  if (!skill || !proyects)
+    return (
+      <header id="header" style={{ height: "100vh" }}>
+        <div
+          style={{
+            height: "100vh",
+            backgroundColor: "#011627",
+            textAlign: "center",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "800",
+          }}
+        >
+          Loading...
+        </div>
+      </header>
+    );
+
   return (
     <>
       <Suspense
