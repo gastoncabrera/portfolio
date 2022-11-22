@@ -3,8 +3,8 @@ import React from "react";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 
-
 export default function Card({ proyects }) {
+
   return (
     <>
       <Fade>
@@ -41,7 +41,7 @@ export default function Card({ proyects }) {
               rel="noreferrer"
               className="card__link demo"
             >
-              Demo
+              Proyecto
             </a>
             {proyects.repolink === "null" ? (
               <></>
@@ -52,7 +52,7 @@ export default function Card({ proyects }) {
                 rel="noreferrer"
                 className="card__link code"
               >
-                Code
+                Codigo
               </a>
             )}
           </div>
