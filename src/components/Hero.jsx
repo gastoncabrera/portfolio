@@ -221,7 +221,7 @@ export default function Hero({ skill, proyects }) {
           </div>
         </div>
         <a
-          href="https://www.canva.com/design/DAEcCloZWlw/tAFCOVR_J4mHqA6ssd7DtQ/view?utm_content=DAEcCloZWlw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          href="https://www.canva.com/design/DAFK_N8Zax4/YRzDiNn4LSbRfnVHZKAD6w/view?utm_content=DAFK_N8Zax4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
           target="_blank"
           rel="noreferrer"
         >

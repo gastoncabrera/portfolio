@@ -8,7 +8,7 @@ export default function Card({ proyects }) {
   return (
     <>
       <Fade>
-        <div className="card__container">
+        <div className="card__container" style={{order: proyects.order}}>
           <div className="card__containerImage">
             {
               !proyects ?
