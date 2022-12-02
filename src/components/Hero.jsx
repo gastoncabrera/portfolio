@@ -89,7 +89,7 @@ export default function Hero({ skill, proyects }) {
                         style={skillProyectAnimation}
                         key={item._id}>
                         <img
-                          src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${item.image}`}
+                          src={`https://db-portfolio-u3mm.vercel.app/skill/skill-image/${item.image}`}
                           alt={item.skill}
                           className={`hero__skillRight ${item.skill}`}
                         />
@@ -123,7 +123,7 @@ export default function Hero({ skill, proyects }) {
 
                       <img
                         className="hero__proyectImage"
-                        src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${item.image}`}
+                        src={`https://db-portfolio-u3mm.vercel.app/proyect/proyect-image/${item.image}`}
                         alt={item.title}
                       />
                     </animated.div>
@@ -146,7 +146,7 @@ export default function Hero({ skill, proyects }) {
               {someSkillFloat()?.map((skl) => (
                 <div className="hero__containerSkill" key={skl._id}>
                   <img
-                    src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${skl.image}`}
+                    src={`https://db-portfolio-u3mm.vercel.app/skill/skill-image/${skl.image}`}
                     alt={skl.skill}
                     className={`hero__skill ${skl.skill}`}
                   />

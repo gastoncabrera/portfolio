@@ -19,7 +19,7 @@ export default function Main({ skill, proyects }) {
               <div className="main__containerSkills">
                 {skill?.map((item, index) => (
                   <img
-                    src={`https://floating-spire-53343.herokuapp.com/skill/skill-image/${item.image}`}
+                    src={`https://db-portfolio-u3mm.vercel.app/skill/skill-image/${item.image}`}
                     alt={item.skill}
                     className="main__skills"
                     loading="lazy"

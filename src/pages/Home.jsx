@@ -13,8 +13,8 @@ const DropdownMenu = lazy(() => import("../components/DropdownMenu"));
 const Hero = lazy(() => import("../components/Hero"));
 const Footer = lazy(() => import("../components/Footer"));
 
-const URLSkill = "https://floating-spire-53343.herokuapp.com/skill";
-const URLProyects = "https://floating-spire-53343.herokuapp.com/proyect";
+const URLSkill = "https://db-portfolio-u3mm.vercel.app/skill";
+const URLProyects = "https://db-portfolio-u3mm.vercel.app/proyect";
 function Home() {
   const [skill, setSkill] = useState(null);
   const [proyects, setProyects] = useState(null);
@@ -33,26 +33,26 @@ function Home() {
 
   const [menu, setMenu] = useState(false);
 
-  if (!skill || !proyects)
-    return (
-      <header id="header" style={{ height: "100vh" }}>
-        <div
-          style={{
-            height: "100vh",
-            backgroundColor: "#011627",
-            textAlign: "center",
-            color: "white",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "30px",
-            fontWeight: "800",
-          }}
-        >
-          Loading...
-        </div>
-      </header>
-    );
+  // if (!skill || !proyects)
+  //   return (
+  //     <header id="header" style={{ height: "100vh" }}>
+  //       <div
+  //         style={{
+  //           height: "100vh",
+  //           backgroundColor: "#011627",
+  //           textAlign: "center",
+  //           color: "white",
+  //           display: "flex",
+  //           justifyContent: "center",
+  //           alignItems: "center",
+  //           fontSize: "30px",
+  //           fontWeight: "800",
+  //         }}
+  //       >
+  //         Loading...
+  //       </div>
+  //     </header>
+  //   );
 
   return (
     <>

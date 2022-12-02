@@ -15,7 +15,7 @@ export default function Card({ proyects }) {
                 <Skeleton className="card__image" borderRadius='0.25rem' baseColor="#b0b0b0" highlightColor="#444" />
                 :
                 <img
-                  src={`https://floating-spire-53343.herokuapp.com/proyect/proyect-image/${proyects.image}`}
+                  src={`https://db-portfolio-u3mm.vercel.app/proyect/proyect-image/${proyects.image}`}
                   alt={proyects.title}
                   loading="lazy"
                   className="card__image"
